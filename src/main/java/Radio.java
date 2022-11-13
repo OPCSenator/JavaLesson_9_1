@@ -12,7 +12,7 @@ public class Radio {
         if (currentChannel < maxChannelNumber) {
             currentChannel++;
         } else {
-            currentChannel = 0;
+            currentChannel = minChannelNumber;
         }
 
     }
@@ -21,14 +21,14 @@ public class Radio {
         if (currentChannel > minChannelNumber) {
             currentChannel--;
         } else {
-            currentChannel = 9;
+            currentChannel = maxChannelNumber;
         }
 
     }
 
 
     public void setChannel(int myChannel) {
-        if ((myChannel >= 0) & (myChannel <= 9)) {
+        if ((myChannel >= minChannelNumber) & (myChannel <= maxChannelNumber)) {
             currentChannel = myChannel;
         }
 
@@ -48,7 +48,7 @@ public class Radio {
     }
 
     public void setSoundLevel(int mySound) {
-        if ((mySound >= 0) & (mySound <= 10)) {
+        if ((mySound >= minSoundLevel) & (mySound <= maxSoundLevel)) {
             currentLoud = mySound;
         }
 
